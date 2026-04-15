@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Adams - About Me</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+</head>
+<body>
+
+<div class="hero-header">
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-j"></i>
+                <div class="logo-text">Joshua Adams</div>
+            </div>
+            <nav>
+                <div class="togglebtn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navlinks" id="navLinks">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="intro-background">
+            <div class="intro-container">
+                <div class="intro-pic">
+                    <img src="images/profile2.jpg" alt="Your Description">
+                </div>
+        
+                <div class="intro">
+                    <h5>Hi I'm a <span class="input"></span></h5>
+                    <h1>Joshua Adams</h1>
+                    <p>I am a first-year Application Development student at Cape Peninsula University of Technology (CPUT). My passion for Information Technology began in high school when I created my first HTML webpage, igniting my interest in web development. I also gained practical experience troubleshooting desktop computers, which reinforced my commitment to pursuing a technology career.</p>
+                </div>
+            </div>
+
+            <div class="background-goals">
+                <h2>Background & Goals</h2>
+                <p>I have a strong passion for technology, especially in the fields of web development and IT systems. My goal is to combine creativity and problem-solving to develop innovative solutions that meet user needs.</p>
+                <p>As a professional, I strive to grow in the application development space while keeping up with new trends in web design, UX/UI, and more. Long-term, my goal is to become a leader in the IT industry and continue helping businesses achieve their digital objectives.</p>
+            </div>
+
+            <!-- Button Group Section -->
+            <div class="btn-group">
+                <a href="Documents/CV Joshua Adams.pdf" class="btn active">Download CV</a>
+                <a href="contact.html" class="btn">Contact</a>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+
+            <div class="testimonial">
+                <img src="images/John" alt="John's Photo" class="testimonial-img">
+                <p>"Joshua's web design strategy perfectly matched our needs. His portfolio demonstrated a great mix of creativity and technical proficiency, making it easy to assess his fit for our development projects. His attention to detail and clear communication make him stand out."</p>
+                <strong>– John, Hiring Manager</strong>
+            </div>
+
+            <div class="testimonial">
+                <img src="images/Sarah" alt="Sarah's Photo" class="testimonial-img">
+                <p>"Joshua's work on my business website was amazing. He made everything simple and easy to understand, even for someone like me who isn't very tech-savvy. The design was beautiful, and the website is now so much more user-friendly. I highly recommend him!"</p>
+                <strong>– Sarah, Business Owner</strong>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer-content">
+            <p>&copy; 2024 Joshua Adams. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="https://www.privacypolicies.com/live/199b6764-a939-4d55-b9c4-3db93e0bcebd" target="_blank">Privacy Policy</a></li>
+                <li><a href="https://www.privacypolicies.com/live/f2169cfc-8900-40c9-8b5e-dc014ef6e49b" target="_blank">Terms of Service</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Button click show hide navbar
+    var togglebtn = document.querySelector(".togglebtn");
+    var nav = document.querySelector(".navlinks");
+
+    togglebtn.addEventListener("click", function() {
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+    });
+
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+
+    // Typed.js Initialization
+    var typed = new Typed(".input", {
+        strings: ["Application Developer", "Multimedia Designer", "IT professional"],
+        typedSpeed: 70,
+        backSpeed: 55,
+        loop: true
+    });
+</script>
+</body>
+</html>

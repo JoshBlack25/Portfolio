@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-j"></i>
+                    <div class="logo-text">Joshua Adams</div>
+                </div>
+                <nav>
+                    <div class="togglebtn" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks" id="navLinks">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/profile1.jpg" alt="Picture of Joshua Adams">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm a <span class="input">Application Developer</span></h5>
+                    <h1>Joshua Adams</h1>
+                    <p>I am a first-year Application Development student at Cape Peninsula University of Technology (CPUT). My passion for Information Technology began in high school when I created my first HTML webpage, igniting my interest in web development. I also gained practical experience troubleshooting desktop computers, which reinforced my commitment to pursuing a technology career.</p>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="skills">
+        <div class="wrapper">
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/HTML-icon.png" alt="HTML Icon">
+                            <span>HTML</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/CSS-icon.png" alt="CSS Icon">
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/JS-icon.png" alt="JavaScript Icon">
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/JAVA-icon.png" alt="App Development Icon">
+                            <span>JAVA</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/canva.png" alt="Design Icon">
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/Packet-tracer-icon.png" alt="Problem Solving Icon">
+                            <span>Packet Tracer</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/Virtualization-icon.png" alt="Virtualization Icon">
+                            <span>Virtualization</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="skill-item">
+                        <div class="skill-card">
+                            <img src="images/vscode-icon.png" alt="Visual Studio Icon">
+                            <span>Visual Studio</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <p>&copy; 2024 Joshua Adams. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="https://www.privacypolicies.com/live/199b6764-a939-4d55-b9c4-3db93e0bcebd" target="_blank">Privacy Policy</a></li>
+                    <li><a href="https://www.privacypolicies.com/live/f2169cfc-8900-40c9-8b5e-dc014ef6e49b" target="_blank">Terms of Service</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        /* button click show hide navbar */
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings: ["Application Developer", "Multimedia Designer", "IT professional"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

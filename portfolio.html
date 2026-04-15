@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Header starts -->
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-j"></i>
+                    <div class="logo-text">Joshua Adams</div>
+                </div>
+                <nav>
+                    <div class="togglebtn" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks" id="navLinks">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="wrapper">
+                <h2>My Projects</h2>
+                <div class="project-gallery">
+                    <div class="project-item">
+                        <img src="images/logo-removebg-preview (1).png" alt="Project 1">
+                        <h3>NGO Website</h3>
+                        <button class="toggle-description">Read More</button>
+                        <p class="full-description" style="display: none;">
+                            This project involved the development of a comprehensive website for a local non-governmental organization (NGO) aimed at enhancing its outreach and engagement with the community.
+                        </p>
+                        <p>Programs Used: HTML, CSS, JavaScript</p>
+                        <a href="Documents/Website Task.zip" download class="download-button">Download Project</a>
+                    </div>
+                    <div class="project-item">
+                        <video controls>
+                            <source src="videos/StudyBreeze.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Advert for StudyBreeze</h3>
+                        <button class="toggle-description">Read More</button>
+                        <p class="full-description" style="display: none;">
+                            This video advert was meticulously crafted to promote the StudyBreeze platform, highlighting features that simplify the studying process for students.
+                        </p>
+                        <p>Program Used: Canva</p>
+                        <a href="videos/StudyBreeze.mp4" download class="download-button">Download Project 2</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="images/Virtual-Network.png" alt="Project 3">
+                        <h3>Virtual Network</h3>
+                        <button class="toggle-description">Read More</button>
+                        <p class="full-description" style="display: none;">
+                            In this project, I designed a virtual network using Cisco Packet Tracer, deepening my understanding of networking concepts like IP addressing and routing protocols.
+                        </p>
+                        <p>Program Used: Cisco Packet Tracer</p>
+                        <a href="Documents/virtual-network.pkt" download class="download-button">Download Project 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Starts -->
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <p>&copy; 2024 Joshua Adams. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="https://www.privacypolicies.com/live/199b6764-a939-4d55-b9c4-3db93e0bcebd" target="_blank">Privacy Policy</a></li>
+                    <li><a href="https://www.privacypolicies.com/live/f2169cfc-8900-40c9-8b5e-dc014ef6e49b" target="_blank">Terms of Service</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script info -->
+    <script>
+        document.querySelectorAll('.toggle-description').forEach(button => {
+            button.addEventListener('click', function() {
+                const fullDescription = this.nextElementSibling; // Get the next sibling (full description)
+                
+                if (fullDescription.style.display === "none" || !fullDescription.style.display) {
+                    fullDescription.style.display = "block"; 
+                    this.textContent = "Read Less"; 
+                } else {
+                    fullDescription.style.display = "none"; 
+                    this.textContent = "Read More"; 
+                }
+            });
+        });
+
+        const projectItems = document.querySelectorAll('.project-item');
+
+        projectItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active'); // Toggle the active class
+            });
+        });
+
+        // Button click show hide navbar
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

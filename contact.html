@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-j"></i>
+                    <div class="logo-text">Joshua Adams</div>
+                </div>
+                <nav>
+                    <div class="togglebtn" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks" id="navLinks">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="contact-container">
+                <div class="contact-intro">
+                    <h1>Contact Me</h1>
+                    <p>If you have any questions or would like to get in touch, feel free to reach out using the form below or through my social media channels.</p>
+                    
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            
+                <div class="form-section">
+                    <div class="form-wrapper">
+                        <h2>Contact Form</h2>
+                        <form action="submit_form.php" method="POST" class="user-contact-form">
+                            <div class="input-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" name="name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="user-email">Email</label>
+                                <input type="email" id="user-email" name="email" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="user-message">Message</label>
+                                <textarea id="user-message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn active">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <p>&copy; 2024 Joshua Adams. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="https://www.privacypolicies.com/live/199b6764-a939-4d55-b9c4-3db93e0bcebd" target="_blank">Privacy Policy</a></li>
+                    <li><a href="https://www.privacypolicies.com/live/f2169cfc-8900-40c9-8b5e-dc014ef6e49b" target="_blank">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+    
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+        
+</body>
+</html>
